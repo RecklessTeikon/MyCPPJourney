@@ -36,7 +36,8 @@ class Computer
 void test1()
 {
     Computer c1("xiaomi", 7777);
-    Computer c2(c1);
+    //Computer c2(c1);
+    Computer c2 = c1;
     c1.print();
     c2.print();//会报double free
 }
