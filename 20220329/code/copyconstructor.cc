@@ -14,7 +14,7 @@ class Computer
     Computer(const Computer &computer)
     {
         printf("拷贝构造函数已被调用\n");
-        _brand = new char[strlen(computer._brand) + 1];
+        _brand = new char[strlen(computer._brand) + 1];//构造函数最好还是把这一行写进初始化里
         strcpy(_brand, computer._brand);
         _price = computer._price;
     }
