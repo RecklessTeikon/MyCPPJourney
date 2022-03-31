@@ -56,7 +56,10 @@ String &String::operator=(const String &rhs)
 {
 	if (this != &rhs)
 	{
-		delete[] _pstr;
+		if(_pstr != nullptr)
+		{
+			delete[] _pstr;
+		}
 		_pstr = new char[strlen(rhs._pstr) + 1];
 		strcpy(_pstr, rhs._pstr);
 	}
